@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 2,
-    "lastUpdated": "2025-08-28T11:47:34.891Z",
+    "totalProblems": 3,
+    "lastUpdated": "2025-08-28T12:25:36.683Z",
     "breakdown": {
       "Codechef": {
         "total": 0,
@@ -10,8 +10,8 @@
         "Hard": 0
       },
       "Gfg": {
-        "total": 0,
-        "Easy": 0,
+        "total": 1,
+        "Easy": 1,
         "Medium": 0,
         "Hard": 0
       },
@@ -31,6 +31,22 @@
   },
   "problems": [
     {
+      "id": "gfg-easy-first-repeating-element",
+      "platform": "Gfg",
+      "difficulty": "Easy",
+      "problemName": "First Repeating Element",
+      "language": "java",
+      "files": {
+        "code": "// User function Template for Java\n\nclass Solution {\n    // Function to return the position of the first repeating element.\n    public static int firstRepeated(int[] arr) {\n        // Your code here\n        int n = arr.length;\n        HashMap<Integer, Integer> map = new HashMap<>();\n        int first = Integer.MAX_VALUE;\n        for(int i=0;i<n;i++){\n            if(map.containsKey(arr[i])){\n                int idx =map.get(arr[i]);\n                if(idx<first){\n                    first = idx;\n                }\n            }\n            else{\n                map.put(arr[i], i+1);\n            }\n        }\n        return (first == Integer.MAX_VALUE) ? -1 : first;\n    }\n}",
+        "readme": "Arrays,Hash,Data_Structures\n\nFirst Repeating Element\nDifficulty: EasyAccuracy: 32.57%Submissions: 301K+Points: 2Average Time: 15m\n\nGiven an array arr[], find the first repeating element. The element should occur more than once and the index of its first occurrence should be the smallest.\n\nNote:- The position you return should be according to 1-based indexing. \n\nExamples:\n\nInput: arr[] = [1, 5, 3, 4, 3, 5, 6]\nOutput: 2\nExplanation: 5 appears twice and its first appearance is at index 2 which is less than 3 whose first the occurring index is 3.\nInput: arr[] = [1, 2, 3, 4]\nOutput: -1\nExplanation: All elements appear only once so answer is -1.\n\nConstraints:\n1 ≤ arr.size() ≤ 106\n0 ≤ arr[i] ≤ 106\n\nTry more examples\nExpected Complexities\nCompany Tags\nAmazonOracle\nTopic Tags\nRelated Articles\nReport An Issue\nIf you are facing any issue on this page. Please let us know.",
+        "notes": "First Repeating Element\n\n          - Summary: The code uses a HashMap to store array elements as keys and their indices as values. It iterates through the input array; if an element is already in the HashMap (meaning it's a repeated element), it updates the index of the first occurrence if the current index is smaller.  If an element is not in the HashMap, it's added with its index. Finally, it returns the index of the first repeated element or -1 if no element is repeated.\n\n          - Time Complexity: O(n) because the code iterates through the array once. HashMap operations (containsKey, get, put) take constant time on average.\n          - Space Complexity: O(n) in the worst case because the HashMap can store up to n key-value pairs if all elements are unique. In the best case it can be O(1) if all elements are same."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-28T12:25:36.485Z"
+    },
+    {
       "id": "leetcode-easy-remove-duplicates-from-sorted-array",
       "platform": "Leetcode",
       "difficulty": "Easy",
@@ -44,7 +60,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T11:47:34.741Z"
+      "lastUpdated": "2025-08-28T12:25:36.488Z"
     },
     {
       "id": "leetcode-easy-two-sum",
@@ -60,7 +76,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T11:47:34.742Z"
+      "lastUpdated": "2025-08-28T12:25:36.489Z"
     }
   ]
 }
