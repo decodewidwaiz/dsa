@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 3,
-    "lastUpdated": "2025-08-28T12:25:36.683Z",
+    "totalProblems": 4,
+    "lastUpdated": "2025-08-28T12:51:37.811Z",
     "breakdown": {
       "Codechef": {
         "total": 0,
@@ -16,9 +16,9 @@
         "Hard": 0
       },
       "Leetcode": {
-        "total": 2,
+        "total": 3,
         "Easy": 2,
-        "Medium": 0,
+        "Medium": 1,
         "Hard": 0
       },
       "Hackerrank": {
@@ -44,7 +44,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:25:36.485Z"
+      "lastUpdated": "2025-08-28T12:51:37.639Z"
     },
     {
       "id": "leetcode-easy-remove-duplicates-from-sorted-array",
@@ -60,7 +60,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:25:36.488Z"
+      "lastUpdated": "2025-08-28T12:51:37.642Z"
     },
     {
       "id": "leetcode-easy-two-sum",
@@ -76,7 +76,23 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:25:36.489Z"
+      "lastUpdated": "2025-08-28T12:51:37.643Z"
+    },
+    {
+      "id": "leetcode-medium-longest-substring-without-repeating-characters",
+      "platform": "Leetcode",
+      "difficulty": "Medium",
+      "problemName": "Longest Substring Without Repeating Characters",
+      "language": "java",
+      "files": {
+        "code": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Map<Character, Integer> map = new HashMap<>();\n        int i = 0;\n        int j = 0;\n        int max = 0;\n        while(j < s.length()){\n            map.put(s.charAt(j), map.getOrDefault(s.charAt(j), 0) + 1);\n            if(map.size() == j - i + 1){\n                max = Math.max(max, j - i + 1);\n                j++;\n            }\n            else if(map.size() < j - i + 1){\n                while(map.size() < j - i + 1){\n                    map.put(s.charAt(i), map.get(s.charAt(i)) - 1);\n                    if(map.get(s.charAt(i)) == 0) map.remove(s.charAt(i));\n                    i++;\n                }\n                j++;\n            }\n        }\n        return max;\n    }\n}",
+        "readme": "HashTableStringSlidingWindow\n\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n \nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\n\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n\n \nConstraints:\n\n\n\t0 <= s.length <= 5 * 104\n\ts consists of English letters, digits, symbols and spaces.",
+        "notes": "Longest Substring Without Repeating Characters\n\n          - Summary: The code utilizes a HashMap to store characters and their counts within a sliding window.  It iterates through the string using two pointers, `i` and `j`, expanding the window (j++) and updating the HashMap. If a repeating character is found (map.size() < j - i + 1), the window shrinks from the left (i++) until the repetition is removed. The algorithm keeps track of the maximum window size (max) representing the length of the longest substring without repeating characters.\n\n          - Time Complexity: O(n) because each character is visited and processed at most twice: once when the right pointer `j` expands the window and once (at most) when the left pointer `i` shrinks the window to remove repetitions. \n          - Space Complexity: O(min(m, n)), where n is the length of the string and m is the size of the character set. In the worst-case scenario, where all characters in the string are unique, the HashMap will store all characters, resulting in a space complexity proportional to the number of unique characters."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-28T12:51:37.645Z"
     }
   ]
 }
