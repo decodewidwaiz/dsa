@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 4,
-    "lastUpdated": "2025-08-28T12:51:37.811Z",
+    "totalProblems": 5,
+    "lastUpdated": "2025-08-29T14:40:56.640Z",
     "breakdown": {
       "Codechef": {
         "total": 0,
@@ -10,8 +10,8 @@
         "Hard": 0
       },
       "Gfg": {
-        "total": 1,
-        "Easy": 1,
+        "total": 2,
+        "Easy": 2,
         "Medium": 0,
         "Hard": 0
       },
@@ -31,6 +31,22 @@
   },
   "problems": [
     {
+      "id": "gfg-easy-anagram",
+      "platform": "Gfg",
+      "difficulty": "Easy",
+      "problemName": "Anagram",
+      "language": "java",
+      "files": {
+        "code": "class Solution {\n    // Function is to check whether two strings are anagram of each other or not.\n    public static boolean areAnagrams(String s1, String s2) {\n\n        // Your code here\n        char ch1[]= s1.toCharArray();\n        char ch2[]= s2.toCharArray();\n        Arrays.sort(ch1);\n        Arrays.sort(ch2);\n        if(Arrays.equals(ch1,ch2))\n        {\n            return true;\n        }\n        else{\n            return false;  \n        } \n    }\n}",
+        "readme": "Strings,Sorting,Data_Structures,Algorithms\n\nAnagram\nDifficulty: EasyAccuracy: 44.93%Submissions: 432K+Points: 2Average Time: 20m\n\nGiven two non-empty strings s1 and s2, consisting only of lowercase English letters, determine whether they are anagrams of each other or not.\nTwo strings are considered anagrams if they contain the same characters with exactly the same frequencies, regardless of their order.\n\nExamples:\n\nInput: s1 = \"geeks\" s2 = \"kseeg\"\nOutput: true \nExplanation: Both the string have same characters with same frequency. So, they are anagrams.\nInput: s1 = \"allergy\", s2 = \"allergyy\" \nOutput: false \nExplanation: Although the characters are mostly the same, s2 contains an extra 'y' character. Since the frequency of characters differs, the strings are not anagrams. \nInput: s1 = \"listen\", s2 = \"lists\" \nOutput: false \nExplanation: The characters in the two strings are not the same — some are missing or extra. So, they are not anagrams.\n\nConstraints:\n1 ≤ s1.size(), s2.size() ≤ 105\ns1, s2 consists of lowercase English letters.\n\nTry more examples\nExpected Complexities\nCompany Tags\nFlipkartDirectiAdobeGoogleNagarroMedia.net\nTopic Tags\nRelated Interview Experiences\nRelated Articles\nReport An Issue\nIf you are facing any issue on this page. Please let us know.",
+        "notes": "Anagram Checker\n\n          - Summary: The function uses character arrays to check if two strings are anagrams. First, it converts the input strings into character arrays. Then, it sorts both arrays. Finally, it compares the sorted arrays using Arrays.equals(). If the sorted arrays are equal, it returns true indicating that the strings are anagrams; otherwise, it returns false.\n\n          - Time Complexity: O(n log n), where n is the length of the longer string. This is dominated by the time complexity of sorting the character arrays using Arrays.sort(), which typically uses a variation of merge sort or quicksort with an average time complexity of O(n log n).\n          - Space Complexity: O(n), where n is the length of the longer string. This is because the space used by the character arrays ch1 and ch2 is proportional to the length of the input strings."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-29T14:40:56.475Z"
+    },
+    {
       "id": "gfg-easy-first-repeating-element",
       "platform": "Gfg",
       "difficulty": "Easy",
@@ -44,7 +60,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:51:37.639Z"
+      "lastUpdated": "2025-08-29T14:40:56.476Z"
     },
     {
       "id": "leetcode-easy-remove-duplicates-from-sorted-array",
@@ -60,7 +76,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:51:37.642Z"
+      "lastUpdated": "2025-08-29T14:40:56.479Z"
     },
     {
       "id": "leetcode-easy-two-sum",
@@ -76,7 +92,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:51:37.643Z"
+      "lastUpdated": "2025-08-29T14:40:56.480Z"
     },
     {
       "id": "leetcode-medium-longest-substring-without-repeating-characters",
@@ -92,7 +108,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-28T12:51:37.645Z"
+      "lastUpdated": "2025-08-29T14:40:56.482Z"
     }
   ]
 }
