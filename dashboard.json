@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 5,
-    "lastUpdated": "2025-08-29T14:40:56.640Z",
+    "totalProblems": 6,
+    "lastUpdated": "2025-09-17T15:32:04.484Z",
     "breakdown": {
       "Codechef": {
         "total": 0,
@@ -10,8 +10,8 @@
         "Hard": 0
       },
       "Gfg": {
-        "total": 2,
-        "Easy": 2,
+        "total": 3,
+        "Easy": 3,
         "Medium": 0,
         "Hard": 0
       },
@@ -44,7 +44,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T14:40:56.475Z"
+      "lastUpdated": "2025-09-17T15:32:04.454Z"
     },
     {
       "id": "gfg-easy-first-repeating-element",
@@ -60,7 +60,23 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T14:40:56.476Z"
+      "lastUpdated": "2025-09-17T15:32:04.455Z"
+    },
+    {
+      "id": "gfg-easy-second-largest",
+      "platform": "Gfg",
+      "difficulty": "Easy",
+      "problemName": "Second Largest",
+      "language": "java",
+      "files": {
+        "code": "// User function Template for Java\n\nclass Solution {\n    public int getSecondLargest(int[] arr) {\n        // Code Here\n        Arrays.sort(arr);\n        int n = arr.length;\n        int largest = arr[n-1];\n        int s = -1;\n        for(int i:arr){\n            if(i<largest) s = i;\n        }\n        return s;\n    }\n}",
+        "readme": "Arrays,Searching,Data_Structures,Algorithms\n\nSecond Largest\nDifficulty: EasyAccuracy: 26.72%Submissions: 1.3MPoints: 2Average Time: 15m\n\nGiven an array of positive integers arr[], return the second largest element from the array. If the second largest element doesn't exist then return -1.\n\nNote: The second largest element should not be equal to the largest element.\n\nExamples:\n\nInput: arr[] = [12, 35, 1, 10, 34, 1]\nOutput: 34\nExplanation: The largest element of the array is 35 and the second largest element is 34.\nInput: arr[] = [10, 5, 10]\nOutput: 5\nExplanation: The largest element of the array is 10 and the second largest element is 5.\nInput: arr[] = [10, 10, 10]\nOutput: -1\nExplanation: The largest element of the array is 10 and the second largest element does not exist.\n\nConstraints:\n2 ≤ arr.size() ≤ 105\n1 ≤ arr[i] ≤ 105\n\nTry more examples\nExpected Complexities\nCompany Tags\nSAP LabsRockstand\nTopic Tags\nRelated Articles\nReport An Issue\nIf you are facing any issue on this page. Please let us know.",
+        "notes": ""
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": false,
+      "lastUpdated": "2025-09-17T15:32:04.456Z"
     },
     {
       "id": "leetcode-easy-remove-duplicates-from-sorted-array",
@@ -76,7 +92,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T14:40:56.479Z"
+      "lastUpdated": "2025-09-17T15:32:04.459Z"
     },
     {
       "id": "leetcode-easy-two-sum",
@@ -92,7 +108,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T14:40:56.480Z"
+      "lastUpdated": "2025-09-17T15:32:04.460Z"
     },
     {
       "id": "leetcode-medium-longest-substring-without-repeating-characters",
@@ -108,7 +124,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T14:40:56.482Z"
+      "lastUpdated": "2025-09-17T15:32:04.462Z"
     }
   ]
 }
